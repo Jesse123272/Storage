@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Glassmorphism</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="signup-style.css">
+</head>
+<body>
+    <div class="bg-circle-1"></div>
+    <div class="bg-circle-2"></div>
+    
+    <div class="container">
+        <div class="form-box">
+            <div class="brand">Glassmorphism</div>
+            
+            <div class="form-toggle">
+                <button class="toggle-btn" id="loginBtn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Sign In
+                </button>
+                <button class="toggle-btn active" id="signupBtn">
+                    <i class="fas fa-user-plus"></i>
+                    Sign Up
+                </button>
+            </div>
+
+            <form class="form active" id="signupForm">
+                <div class="input-group">
+                    <i class="fas fa-envelope input-icon"></i>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="text" placeholder="Username" required>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-lock input-icon"></i>
+                    <input type="password" placeholder="Password" required>
+                    <div class="password-strength">
+                        <div class="strength-bar"></div>
+                        <span class="strength-text">Password Strength</span>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-lock input-icon"></i>
+                    <input type="password" placeholder="Confirm Password" required>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">Accept <a href="#" id="termsLink">Terms & Conditions</a></label>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-user-plus"></i>
+                    Sign Up
+                </button>
+                
+                <p class="switch-text">
+                    Already have an account? <a href="signin.html" id="switchToSignin">Sign In</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Terms & Conditions Modal -->
+    <div class="modal-overlay" id="termsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Terms & Conditions</h3>
+                <button class="close-modal" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><strong>1. Acceptance of Terms</strong></p>
+                <p>By creating an account, you agree to these terms and conditions.</p>
+                
+                <p><strong>2. User Responsibilities</strong></p>
+                <p>You are responsible for maintaining the confidentiality of your account.</p>
+                
+                <p><strong>3. Privacy Policy</strong></p>
+                <p>We respect your privacy and protect your personal information.</p>
+                
+                <p><strong>4. Service Availability</strong></p>
+                <p>We strive to maintain service availability but cannot guarantee 100% uptime.</p>
+                
+                <p><strong>5. Modifications</strong></p>
+                <p>We reserve the right to modify these terms at any time.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="accept-terms-btn" id="acceptTerms">Accept Terms</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="signup-script.js"></script>
+</body>
+</html>
